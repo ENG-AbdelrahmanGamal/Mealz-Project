@@ -1,8 +1,8 @@
-package com.hamalawey.mealz.di
+package com.example.mealsproject.di
 
-import com.hamalawey.data.remote.ApiService
-import com.hamalawey.data.repo.MealsRepoImpl
-import com.hamalawey.domain.repo.MealsRepo
+import com.example.data.remote.ApiServies
+import com.example.data.repo.MealsRepoImp
+import com.example.domain.repo.MealsRepo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,7 +13,7 @@ import dagger.hilt.components.SingletonComponent
 object RepoModule {
 
     @Provides
-    fun provideRepo(apiService: ApiService): MealsRepo{
-        return MealsRepoImpl(apiService)
+    fun provideRepo(apiService: ApiServies): MealsRepo {
+        return MealsRepoImp(apiService)
     }
 }
